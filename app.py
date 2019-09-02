@@ -13,7 +13,7 @@ def view2():
 
 @app.route("/2")
 def view_template():
-    print("Hello world")
+    print("Chau mundo!")
     return render_template("index.html")
 
 @app.route("/3")
