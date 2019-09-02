@@ -17,7 +17,7 @@ def view_template():
 
 @app.route("/3")
 def pass_arguments():
-    my_name = "Marcelo"
+    my_name = "Marce"
     username = request.args.get('username')
     return render_template("three.html", name=my_name, surname="Elizeche", username=username)
 
