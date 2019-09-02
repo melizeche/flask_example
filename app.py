@@ -23,3 +23,8 @@ def pass_arguments():
     username = request.args.get('username')
     return render_template("three.html", name=my_name, surname="Elizeche", username=username, name2=my_name2)
 
+@app.route("/list")
+def view_list():
+    currencies = [["CHF",100], ["EUR", 200], ["USD",400], ["ARG",997], ["CRC",222], ["PYG", 876]] 
+    return render_template("currencies.html", curr_list=currencies)
+
