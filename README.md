@@ -8,7 +8,7 @@
  - return html as template
  - pass variables to the template
 
- ## Install flask\
+ ## Install flask
  On the terminal:
 
  `pip install flask`
