@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello, World!!!!!"
+    return "Hello, Mundo!!!!!"
 
 @app.route("/page2wow")
 def view2():
@@ -16,11 +16,14 @@ def view_template():
     print("Chau mundo!")
     return render_template("index.html")
 
-@app.route("/3")
+@app.route("/3", methods=['POST','GET'])
 def pass_arguments():
     my_name = "Isa"
     my_name2 = "Charlotte"
     username = request.args.get('username')
+    my_name = request.form.get('name')
+    
+    print(request.args.get('keys_info'))
     return render_template("three.html", name=my_name, surname="Elizeche", username=username, name2=my_name2)
 
 @app.route("/list")
@@ -28,3 +31,7 @@ def view_list():
     currencies = [["CHF",100], ["EUR", 200], ["USD",400], ["ARG",997], ["CRC",222], ["PYG", 876]] 
     return render_template("currencies.html", curr_list=currencies)
 
+
+if __name__ == '__main__':
+
+    app.run(debug=True, host="0.0.0.0")

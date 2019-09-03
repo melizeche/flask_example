@@ -1,5 +1,6 @@
 <html>
 <head>
+        <link rel="stylesheet" href="/static/bulma.css"
         <meta http-equiv="refresh" content="2" >
 </head>
 <body>
@@ -7,7 +8,7 @@
 <h2>Currencies</h2>
 {% for currency in curr_list  %}
  <li> Name: {{ currency[0] }} <br>
-      Price: {{ currency[1] }}     
+      Price: <span class="price"> {{ currency[1] }}  </span>   
 </li>
 {% endfor %}
 </body>
